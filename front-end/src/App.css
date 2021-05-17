@@ -1,0 +1,133 @@
+body {
+    /* background: rgb(245, 245, 245); */
+    background-image: radial-gradient(rgb(19, 36, 94), rgb(146, 157, 184));
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(23, 31, 58);
+    padding: 0.2em;
+}
+
+.App {
+    text-align: center;
+}
+
+.searchContainer {
+    /* border: 2px solid blue; */
+    margin: 20px;
+    width: 600px;
+}
+.searchContainer input[type="text"] {
+    width: 50%;
+    height: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+}
+option {
+    width: 100%;
+}
+.searchBtn {
+    margin-left: 2em;
+    padding: 0.4em;
+    border-radius: 5px;
+    color: black;
+    /* background-color: rgb(43, 116, 226); */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.mainContainer {
+    margin: 4em auto;
+    max-width: 90%;
+    color: white;
+    border-radius: 5px;
+    background: rgba(31, 87, 124, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border: 2px solid red; */
+}
+
+.currentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1em auto;
+    max-width: 70%;
+    height: 250px;
+    /* border: 2px solid pink; */
+}
+
+.dailyContainer {
+    display: flex;
+}
+.weatherCard:nth-child(even) {
+    background: rgb(133, 119, 119);
+}
+.weatherCard {
+    margin: 0 auto;
+    height: 250px;
+    width: 12.5%;
+    /* border: 2px solid yellow; */
+}
+.weatherCardImg {
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.weatherCardImg img {
+    margin: -15px 0 0 -15px;
+}
+.weatherCard h2 {
+    padding: 0;
+    margin: 0.5em;
+}
+.dailyContainer :hover {
+    background: rgb(207, 123, 123);
+
+    color: black;
+}
+.minTemp {
+    color: #f0b9c1;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        background: rgb(255, 230, 230);
+    }
+    header {
+        flex-direction: column;
+    }
+    .mainContainer {
+        background: none;
+        box-shadow: none;
+    }
+    .currentContainer {
+        flex-direction: column;
+        height: 500px;
+        background: rgba(31, 87, 124, 255);
+    }
+    .currentContainer h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0.2em;
+    }
+    .dailyContainer {
+        flex-direction: column;
+    }
+    .weatherCard {
+        background: rgba(31, 87, 124, 255);
+        margin: 2em auto;
+        padding: 2em;
+        height: 250px;
+        width: 50%;
+    }
+}
